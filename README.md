@@ -52,7 +52,29 @@ Model Waveform
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
 Program
+```
+Am=4.1;
+fm=337;
+Fs=33700 t=0:1/Fs:2/fm;
+m1=Amcos(23.14fmt);
+subplot(4,1,1);
+plot(t,m1);
+Ac=8.2; Fc=3370;
+c1=Accos(23.14Fct);
+subplot(4,1,2);
+plot(t,c1);
+m2=Amcos(1.57-(23.14fmt));
+c2=Accos(1.57-(23.14Fct));
+s1=c1.*m1;
+s2=c2.*m2;
+S_lsb=s1+s2;
+subplot(4,1,3);
+plot(t,S_lsb);
+S_usb=s1+s2;
+subplot(4,1,4);
+plot(t,S_usb);
 
+```
 OUTPUT WAVEFORM
 <img width="1068" height="651" alt="Screenshot 2025-10-16 230257" src="https://github.com/user-attachments/assets/8da6ea57-a2e5-43c2-bd56-10375b9952a5" />
 
