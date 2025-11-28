@@ -53,39 +53,35 @@ Model Waveform
 
 Program
 ```
-Am=4.1;
-fm=337;
-Fs=33700 t=0:1/Fs:2/fm;
-m1=Amcos(23.14fmt);
+Am=6.2;
+fm=494;
+Ac=12.4;
+fc=4940;
+fs=49400;
+t=0:1/fs:3/fm;
+m1=Am*cos(2*3.14*fm*t);
 subplot(4,1,1);
-plot(t,m1);
-Ac=8.2; Fc=3370;
-c1=Accos(23.14Fct);
+plot(t,m1)
+m2=Am*cos(1.57-2*3.14*fm*t);
+c1=Ac*cos(2*3.14*fc*t);
 subplot(4,1,2);
 plot(t,c1);
-m2=Amcos(1.57-(23.14fmt));
-c2=Accos(1.57-(23.14Fct));
+c2=Ac*cos(1.57-2*3.14*fc*t);
 s1=c1.*m1;
 s2=c2.*m2;
-S_lsb=s1+s2;
+Slsb=s1+s2;
 subplot(4,1,3);
-plot(t,S_lsb);
-S_usb=s1+s2;
+plot(t,Slsb);
+Susb=s1-s2;
 subplot(4,1,4);
-plot(t,S_usb);
-
+plot(t,Susb);
 ```
 OUTPUT WAVEFORM
-<img width="1068" height="651" alt="Screenshot 2025-10-16 230257" src="https://github.com/user-attachments/assets/8da6ea57-a2e5-43c2-bd56-10375b9952a5" />
+<img width="1911" height="1131" alt="Screenshot 2025-09-23 172918" src="https://github.com/user-attachments/assets/750efb95-b93c-4614-bfc0-996a8de5cdd4" />
 
 TABULATION
-![WhatsApp Image 2025-10-16 at 22 56 42_2c78a105](https://github.com/user-attachments/assets/e679c81f-5996-47cd-9a4a-b3d56e36c81f)
 
-
-
-
-
-
+![WhatsApp Image 2025-11-28 at 20 39 39_5d125b6f](https://github.com/user-attachments/assets/b166ec38-2198-4614-be9a-72e6441f8b55)
 
 
 
